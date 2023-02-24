@@ -15,5 +15,5 @@ steps:
     gitHubAccessToken: '$(GITHUB_ACCESS_TOKEN)'
     azureDevOpsAccessToken: '$(System.AccessToken)'
     dockerImageRepository: 'tingle/dependabot-azure-devops'
-    dockerImageTag: '0.10.0'
+    dockerImageTag: '0.9.0'
     extraEnvironmentVariables: 'EXCON_DEBUG=1'
