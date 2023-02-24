@@ -1,0 +1,19 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- checkout: self
+  submodules: true
+
+- task: dependabot@1
+  inputs:
+    setAutoComplete: true
+    mergeStrategy: 'squash'
+    gitHubAccessToken: '$(GITHUB_ACCESS_TOKEN)'
+    azureDevOpsAccessToken: '$(System.AccessToken)'
+    dockerImageRepository: 'tingle/dependabot-azure-devops'
+    dockerImageTag: '0.9.0'
+    extraEnvironmentVariables: 'EXCON_DEBUG=1'
