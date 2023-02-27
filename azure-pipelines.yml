@@ -14,6 +14,6 @@ steps:
     mergeStrategy: 'squash'
     gitHubAccessToken: '$(GITHUB_ACCESS_TOKEN)'
     azureDevOpsAccessToken: '$(System.AccessToken)'
-    dockerImageRepository: 'tingle/dependabot-azure-devops'
-    dockerImageTag: '0.9.0'
+    dockerImageRepository: 'tinglesoftware/dependabot-updater'
+    dockerImageTag: '0.15.0'
     extraEnvironmentVariables: 'EXCON_DEBUG=1'
